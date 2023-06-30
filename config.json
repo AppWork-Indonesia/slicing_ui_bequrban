@@ -1,0 +1,11 @@
+{
+    "modules": [
+        "splashscreen",
+        "user/dashboard",
+        "user/detail",
+        "navbar"
+    ],
+    "module_directory_name": "module",
+    "experimental_mode": false,
+    "unfreezed": true
+}
