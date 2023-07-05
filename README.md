@@ -1,4 +1,4 @@
-# Slincing UI Bequrban
+# Slicing UI Bequrban
 
 [![UI Design](assets/ui/bequrban.png)]([https://www.facebook.com/your-facebook-link](https://dribbble.com/shots/21816429-Bequrban-Online-Qurban-Application))
 
