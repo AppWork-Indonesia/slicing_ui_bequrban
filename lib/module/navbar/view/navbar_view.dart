@@ -19,18 +19,18 @@ class NavbarView extends StatefulWidget {
           children: [
             const DashboardView(),
             Container(
-              color: Colors.red,
+              color: Colors.green,
             ),
             Container(
-              color: Colors.red,
+              color: Colors.purple,
             ),
             Container(
-              color: Colors.red,
+              color: Colors.blue,
             ),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: const Color(0xff0065ff),
+          selectedItemColor: const Color(0xff008e46),
           unselectedItemColor: const Color.fromARGB(255, 121, 121, 121),
           currentIndex: controller.selectedIndex,
           onTap: (newIndex) => controller.updateIndex(newIndex),

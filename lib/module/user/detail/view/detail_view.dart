@@ -25,7 +25,7 @@ class DetailView extends StatefulWidget {
         elevation: 0,
         title: Center(
           child: Text(
-            item["product_name"],
+            item["product_name"] ?? "-",
             style: const TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,

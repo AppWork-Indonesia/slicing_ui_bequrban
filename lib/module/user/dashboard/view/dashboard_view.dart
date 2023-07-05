@@ -10,16 +10,6 @@ class DashboardView extends StatefulWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        // leading: IconButton(
-        //   icon: const Icon(Icons.chevron_left),
-        //   color: Colors.black,
-        //   iconSize: 40,
-        //   onPressed: () {
-        //     // Tindakan yang ingin Anda lakukan saat tombol kembali ditekan
-        //     // Misalnya, navigasi ke halaman sebelumnya
-        //     Navigator.pop(context);
-        //   },
-        // ),
         backgroundColor: Colors.white,
         elevation: 0,
         actions: [
@@ -72,7 +62,10 @@ class DashboardView extends StatefulWidget {
             children: [
               const headerImage(),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(
+                  left: 10.0,
+                  right: 10.0,
+                ),
                 child: QCategoryPicker(
                   items: const [
                     {
@@ -110,11 +103,7 @@ class DashboardView extends StatefulWidget {
                   physics: const ScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     var item = controller.products[index];
-                    InkWell(
-                      onTap: () => Get.to(DetailView(item: item)),
-                    );
                     return InkWell(
-                      onTap: () => Get.to(DetailView(item: item)),
                       child: Container(
                         decoration: BoxDecoration(
                             border: Border.all(
@@ -134,7 +123,7 @@ class DashboardView extends StatefulWidget {
                                         20)), // Menentukan border radius
                                 child: Image.network(
                                   item["photo"],
-                                  width: 200,
+                                  width: MediaQuery.of(context).size.width,
                                   height: 150,
                                   fit: BoxFit.cover,
                                 ),
@@ -144,10 +133,8 @@ class DashboardView extends StatefulWidget {
                               color: const Color(0xff008e46),
                               height: 30,
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const SizedBox(
-                                    width: 20.0,
-                                  ),
                                   Image.asset(
                                     "assets/icon/sehat.png",
                                     width: 25.0,
@@ -214,9 +201,6 @@ class DashboardView extends StatefulWidget {
                                   ),
                                 ],
                               ),
-                            ),
-                            const SizedBox(
-                              height: 5.0,
                             ),
                           ],
                         ),

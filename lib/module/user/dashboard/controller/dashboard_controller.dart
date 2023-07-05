@@ -45,6 +45,7 @@ class DashboardController extends State<DashboardView> {
   List products = [
     {
       "id": 1,
+      "category": "goat",
       "photo":
           "https://images.unsplash.com/photo-1560819400-434c188f63ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
       "product_name": "Platinum Goat",
@@ -55,6 +56,7 @@ class DashboardController extends State<DashboardView> {
     },
     {
       "id": 2,
+      "category": "goat",
       "photo":
           "https://cdn.pixabay.com/photo/2016/08/16/01/19/goat-1596880_1280.jpg",
       "product_name": "Premium Goat",
@@ -65,6 +67,7 @@ class DashboardController extends State<DashboardView> {
     },
     {
       "id": 3,
+      "category": "sheep",
       "photo":
           "https://cdn.pixabay.com/photo/2022/05/08/20/39/sheep-7182968_1280.jpg",
       "product_name": "Platinum Sheep",
@@ -75,6 +78,7 @@ class DashboardController extends State<DashboardView> {
     },
     {
       "id": 4,
+      "category": "cow",
       "photo":
           "https://cdn.pixabay.com/photo/2016/10/04/23/52/cow-1715829_1280.jpg",
       "product_name": "Cow",

@@ -18,7 +18,6 @@ class headerImage extends StatelessWidget {
         Container(
           height: 200,
           decoration: BoxDecoration(
-            color: Colors.black,
             gradient: LinearGradient(
               colors: [
                 Colors.black,
@@ -27,66 +26,66 @@ class headerImage extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
-          top: 20,
-          left: 20,
-          child: Image.asset(
-            "assets/icon/logo.png",
-            width: 25.0,
-            height: 25.0,
-            fit: BoxFit.fill,
-            color: Colors.white,
-          ),
-        ),
-        const Positioned(
-          top: 55.0,
-          left: 16.0,
-          child: Text(
-            "Qurban Legal and Easy\nform home",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        const Positioned(
-          top: 100.0,
-          left: 16.0,
-          child: Text(
-            "Start\nfrom",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 12.0,
-            ),
-          ),
-        ),
-        const Positioned(
-          top: 102.0,
-          left: 50.0,
-          child: Text(
-            "2.500K",
-            style: TextStyle(
-              color: Color.fromARGB(255, 255, 169, 40),
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        Positioned(
-          bottom: 20.0,
-          left: 16.0,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white,
-            ),
-            onPressed: () {},
-            child: const Text(
-              "Search Now",
-              style: TextStyle(
-                color: Colors.black,
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(
+                "assets/icon/logo.png",
+                height: MediaQuery.of(context).size.height * 0.03,
+                fit: BoxFit.fill,
+                color: Colors.white,
               ),
-            ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              const Text(
+                "Qurban Legal and Easy\nform home",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Row(
+                children: [
+                  Text(
+                    "Start\nfrom",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12.0,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text(
+                    "2.500K",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 255, 169, 40),
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 5.0,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                ),
+                onPressed: () {},
+                child: const Text(
+                  "Search Now",
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ],
